@@ -1,13 +1,13 @@
 
 public class ConsolePrinter {
-	private AreaSumCalculator ac;
+	private AreaCalculator ac;
 	
-	public void setAreaCalculator(AreaSumCalculator ac){
+	public void setAreaCalculator(AreaCalculator ac){
 		this.ac = ac;
 	}
 	
 	public void print(){
-		System.out.println(ac.getAreaSum());
+		System.out.println(ac.getarearesult());
 	}
 	
 }
