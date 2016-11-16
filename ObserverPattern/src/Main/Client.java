@@ -5,11 +5,13 @@ public class Client {
 	public static void main(String[] args){
 		ScoreRecord scoreRecord = new ScoreRecord();
 		//3개의 정수만 출력
-		DataSheetView dataSheetView = new DataSheetView(scoreRecord,3);
-		DataSortView dataSortView = new DataSortView(scoreRecord);
+		Observer dataSheetView = new DataSheetView(scoreRecord,3);
+		Observer dataSortView = new DataSortView(scoreRecord);
+
 		
-		scoreRecord.setDataSortView(dataSortView);
-		scoreRecord.setDataSheetView(dataSheetView);
+		scoreRecord.addObserver(dataSheetView);
+		scoreRecord.addObserver(dataSortView);
+		
 		
 		for(int index = 5; index >= 1; index--){
 			int score = index * 10;

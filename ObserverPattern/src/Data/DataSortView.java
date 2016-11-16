@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class DataSortView {
+public class DataSortView implements Observer{
 	private ScoreRecord scoreRecord;
 	
 	public DataSortView(ScoreRecord scoreRecord){
